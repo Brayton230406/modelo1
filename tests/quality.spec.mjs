@@ -3,6 +3,19 @@ import AxeBuilder from '@axe-core/playwright';
 
 const viewports = [320, 390, 768, 1440];
 
+test.afterEach(async ({}, testInfo) => {
+  if (testInfo.status !== testInfo.expectedStatus) {
+    const details = testInfo.errors
+      .map((error) => error.message)
+      .join(' | ')
+      .replace(/\r?\n/g, ' ')
+      .replace(/%/g, '%25')
+      .replace(/\r/g, '%0D')
+      .replace(/\n/g, '%0A');
+    console.log(`::error title=Playwright failure::${testInfo.title}: ${details}`);
+  }
+});
+
 test.describe('calidad HTML, accesibilidad y responsive', () => {
   test('tiene estructura semántica y jerarquía de encabezados', async ({ page }) => {
     await page.goto('/');
