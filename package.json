@@ -1,0 +1,16 @@
+{
+  "name": "mar-de-fondo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page accesible para una cevichería ecuatoriana",
+  "scripts": {
+    "test": "npm run test:html && playwright test",
+    "test:html": "html-validate index.html",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.55.0",
+    "html-validate": "^9.47.0"
+  }
+}

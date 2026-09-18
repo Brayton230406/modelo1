@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="a11y.css">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -46,7 +47,7 @@
         <div class="hero-image reveal reveal-delay" role="img" aria-label="Ceviche fresco servido con limón y hierbas"></div>
       </div>
       <div class="hero-ticker" aria-label="Especialidades de la casa">
-        <div class="ticker-track"><span>CEVICHE DE CAMARÓN</span><i>✳</i><span>ENCEBOLLADO MANABA</span><i>✳</i><span>ARROZ MARINERO</span><i>✳</i><span>CEVICHE DE CAMARÓN</span><i>✳</i><span>ENCEBOLLADO MANABA</span></div>
+        <div class="ticker-track"><span>CEVICHE DE CAMARÓN</span><i aria-hidden="true">✳</i><span>ENCEBOLLADO MANABA</span><i aria-hidden="true">✳</i><span>ARROZ MARINERO</span><i aria-hidden="true">✳</i><span>CEVICHE DE CAMARÓN</span><i aria-hidden="true">✳</i><span>ENCEBOLLADO MANABA</span></div>
       </div>
     </section>
 
@@ -54,9 +55,9 @@
       <div class="container">
         <div class="section-heading reveal"><div><p class="eyebrow">Para empezar</p><h2>La carta que<br><em>vuelve a llamar.</em></h2></div><p>Ingredientes honestos, porciones generosas y ese punto ácido que sabe a costa.</p></div>
         <div class="menu-grid">
-          <article class="menu-card reveal"><div class="dish-image dish-one"></div><div class="dish-info"><div><h3>Ceviche de camarón</h3><p>Tomate, limón, cebolla morada y chifles.</p></div><strong>$12.90</strong></div></article>
-          <article class="menu-card reveal reveal-delay"><div class="dish-image dish-two"></div><div class="dish-info"><div><h3>Encebollado manaba</h3><p>Albacora, yuca, cebolla encurtida y cilantro.</p></div><strong>$8.50</strong></div></article>
-          <article class="menu-card reveal reveal-delay-2"><div class="dish-image dish-three"></div><div class="dish-info"><div><h3>Arroz marinero</h3><p>Arroz cremoso, calamar, camarón y pescado.</p></div><strong>$14.50</strong></div></article>
+          <article class="menu-card reveal"><div class="dish-image dish-one" role="img" aria-label="Ceviche de camarón servido con chifles"></div><div class="dish-info"><div><h3>Ceviche de camarón</h3><p>Tomate, limón, cebolla morada y chifles.</p></div><strong>$12.90</strong></div></article>
+          <article class="menu-card reveal reveal-delay"><div class="dish-image dish-two" role="img" aria-label="Encebollado manaba con yuca y cebolla encurtida"></div><div class="dish-info"><div><h3>Encebollado manaba</h3><p>Albacora, yuca, cebolla encurtida y cilantro.</p></div><strong>$8.50</strong></div></article>
+          <article class="menu-card reveal reveal-delay-2"><div class="dish-image dish-three" role="img" aria-label="Arroz marinero con mariscos"></div><div class="dish-info"><div><h3>Arroz marinero</h3><p>Arroz cremoso, calamar, camarón y pescado.</p></div><strong>$14.50</strong></div></article>
         </div>
         <div class="center-action"><a class="button button-outline" href="#reservar">Ver carta completa <span aria-hidden="true">↗</span></a></div>
       </div>
@@ -67,7 +68,7 @@
     </section>
 
     <section id="visitanos" class="locations-section">
-      <div class="container locations-grid"><div class="locations-copy reveal"><p class="eyebrow">Ven a vernos</p><h2>Tu mesa<br><em>te espera.</em></h2><div class="location-item"><span class="location-number">01</span><div><h3>La Floresta</h3><p>Av. 12 de Octubre y Coruña<br>Quito, Ecuador</p><a href="tel:+59322345678">+593 2 234 5678</a></div></div><div class="location-item"><span class="location-number">02</span><div><h3>Cumbayá</h3><p>Av. Interoceánica, local 14<br>Quito, Ecuador</p><a href="tel:+59322345679">+593 2 234 5679</a></div></div></div><div class="map-panel reveal reveal-delay"><div class="map-pin">✦</div><span>Abierto todos los días</span><strong>11:30 — 21:30</strong><a class="button button-light" href="#reservar">Cómo llegar <span aria-hidden="true">↗</span></a></div></div>
+      <div class="container locations-grid"><div class="locations-copy reveal"><p class="eyebrow">Ven a vernos</p><h2>Tu mesa<br><em>te espera.</em></h2><div class="location-item"><span class="location-number">01</span><div><h3>La Floresta</h3><p>Av. 12 de Octubre y Coruña<br>Quito, Ecuador</p><a href="tel:+59322345678">+593 2 234 5678</a></div></div><div class="location-item"><span class="location-number">02</span><div><h3>Cumbayá</h3><p>Av. Interoceánica, local 14<br>Quito, Ecuador</p><a href="tel:+59322345679">+593 2 234 5679</a></div></div></div><div class="map-panel reveal reveal-delay"><div class="map-pin" aria-hidden="true">✦</div><span>Abierto todos los días</span><strong>11:30 — 21:30</strong><a class="button button-light" href="#reservar">Cómo llegar <span aria-hidden="true">↗</span></a></div></div>
     </section>
 
     <section id="reservar" class="reservation-section"><div class="container reservation-grid"><div><p class="eyebrow">Una mesa, una historia</p><h2>Reserva y<br><em>ven con hambre.</em></h2><p>Te confirmaremos tu reserva por WhatsApp. Para grupos de más de 8 personas, escríbenos directamente.</p></div><form class="reservation-form" id="reservation-form"><label>Nombre<input type="text" name="nombre" autocomplete="name" required></label><label>Teléfono<input type="tel" name="telefono" autocomplete="tel" required></label><div class="form-row"><label>Fecha<input type="date" name="fecha" required></label><label>Personas<select name="personas"><option>2 personas</option><option>3 personas</option><option>4 personas</option><option>5+ personas</option></select></label></div><button class="button" type="submit">Solicitar reserva <span aria-hidden="true">→</span></button><p id="form-message" class="form-message" role="status"></p></form></div></section>

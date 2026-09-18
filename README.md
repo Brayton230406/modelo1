@@ -31,6 +31,17 @@ python -m http.server 8000
 
 Después visita `http://localhost:8000`.
 
+## CI/CD y GitHub Pages
+
+El workflow `.github/workflows/ci-cd.yml` ejecuta en cada pull request y push a `main`:
+
+- Validación HTML5 con `html-validate`.
+- Pruebas semánticas y responsive con Playwright en 320, 390, 768 y 1440 px.
+- Auditoría automatizada WCAG 2.2 AA con axe-core.
+- Pruebas de teclado, foco, nombres accesibles, overflow y enlaces externos HTTPS.
+
+El despliegue a GitHub Pages depende del job de calidad. Si una prueba falla, la publicación no se ejecuta.
+
 ## Próximos pasos de producción
 
 - Reemplazar textos, precios, teléfonos y direcciones por datos reales.
