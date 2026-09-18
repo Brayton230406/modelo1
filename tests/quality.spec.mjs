@@ -90,7 +90,10 @@ test.describe('calidad HTML, accesibilidad y responsive', () => {
         target: link.target,
         rel: link.rel,
       }))
-      .filter(({ href }) => /^https?:\/\//i.test(href)));
+      .filter(({ href }) => {
+        const url = new URL(href);
+        return /^https?:$/i.test(url.protocol) && url.origin !== location.origin;
+      }));
 
     for (const link of externalLinks) {
       expect(link.href).toMatch(/^https:\/\//i);

@@ -1,5 +1,6 @@
 :root {
   --coral: #a64231;
+  --muted: #53666a;
 }
 
 :focus-visible {
@@ -12,6 +13,10 @@
 }
 
 .reservation-section .eyebrow {
+  color: #fff;
+}
+
+.reservation-section h2 em {
   color: #fff;
 }
 
