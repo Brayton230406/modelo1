@@ -32,8 +32,11 @@ jobs:
       - name: Instalar navegador de pruebas
         run: npx playwright install --with-deps chromium
 
-      - name: Ejecutar pruebas HTML, WCAG, responsive y enlaces
-        run: npm test
+      - name: Validar HTML5
+        run: npm run test:html
+
+      - name: Ejecutar pruebas WCAG, responsive y enlaces
+        run: npm run test:e2e -- --reporter=line
 
   deploy:
     name: Publicar en GitHub Pages
