@@ -78,7 +78,7 @@ test.describe('calidad HTML, accesibilidad y responsive', () => {
     }
 
     await expect(page.locator('button[type="submit"]')).toHaveAccessibleName(/Solicitar reserva/);
-    await expect(page.locator('.menu-toggle')).toHaveAccessibleName('Menú');
+    await expect(page.locator('.menu-toggle')).toHaveAttribute('aria-label', 'Menú');
   });
 
   test('solo utiliza URLs externas seguras', async ({ page }) => {

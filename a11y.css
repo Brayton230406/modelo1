@@ -20,6 +20,10 @@
   color: #fff;
 }
 
+.site-footer .brand em {
+  color: #fff;
+}
+
 .menu-toggle,
 .location-item a,
 .footer-links a {
