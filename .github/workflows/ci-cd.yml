@@ -30,7 +30,7 @@ jobs:
         run: npm install
 
       - name: Instalar navegador de pruebas
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install chromium
 
       - name: Validar HTML5
         run: npm run test:html
